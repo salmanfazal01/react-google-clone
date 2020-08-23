@@ -24,7 +24,7 @@ const Searchbar = ({ hideButtons = false, inputValue }) => {
   };
 
   return (
-    <form className="search">
+    <form className={`search ${!hideButtons && "column"}`}>
       <div
         className={`search_input ${inputFocus ? "search_input_focus" : null}`}
       >

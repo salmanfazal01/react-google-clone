@@ -27,7 +27,7 @@ const HomePage = () => {
           alt="Logo"
         />
         <div className="body_inputContainer">
-          <Searchbar hideButtons />
+          <Searchbar />
         </div>
       </div>
     </div>

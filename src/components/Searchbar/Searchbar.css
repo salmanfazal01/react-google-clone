@@ -66,3 +66,7 @@
 .search_buttonsHidden {
     display: none!important;
 }
+
+.column {
+    flex-direction: column;
+}

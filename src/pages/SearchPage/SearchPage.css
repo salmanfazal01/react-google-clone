@@ -3,7 +3,6 @@
     position: sticky;
     padding: 20px 20px 0px;
     width: 100%;
-    border-bottom: 1px solid lightgray;
     flex-wrap: nowrap;
 }
 
@@ -24,6 +23,7 @@
 .searchPage_headerButtons {
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
 }
 
 .searchPage_headerButtonsLeft {
@@ -32,7 +32,7 @@
 
 .searchPage_headerButtonsRight {
     display: flex;
-    /*margin-left: 70px!important;*/
+    margin-left: 70px!important;
 }
 
 .searchPage_headerButton {
@@ -67,7 +67,8 @@
 }
 
 .searchPage_resultCount {
-    padding-top: 10px;
+    padding-top: 15px;
+    margin-bottom: -10px!important;
     color: #70757a;
 }
 
@@ -103,7 +104,9 @@
 @media only screen and (max-width: 800px) {
     .searchPage_headerButtonsRight {
         margin-right: 0!important;
+        margin-left: 0!important;
     }
+
 
     .searchPage_headerLogo {
         margin-right: 10px;

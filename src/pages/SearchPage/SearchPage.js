@@ -88,7 +88,10 @@ const SearchPage = () => {
 
               {term && (
                 <Grid item className="searchPage_results">
-                  <Typography className="searchPage_resultCount">
+                  <Typography
+                    variant="body2"
+                    className="searchPage_resultCount"
+                  >
                     About {data?.searchInformation.formattedTotalResults}{" "}
                     results ({data?.searchInformation.formattedSearchTime}{" "}
                     seconds)
