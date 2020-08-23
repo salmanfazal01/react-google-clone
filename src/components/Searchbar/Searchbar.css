@@ -1,5 +1,6 @@
 .search {
-
+    display: flex;
+    align-items: center;
 }
 
 .search_input {
@@ -7,7 +8,7 @@
     align-items: center;
     border: 1px solid lightgray;
     height: 30px;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 999px;
     width: 75vw;
     margin: 40px auto 0;

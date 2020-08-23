@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import "./Searchbar.css";
 import { useHistory } from "react-router-dom";
-
+import { useStateValue } from "../../contextApi/StateProvider";
 import { Search as SearchIcon, Mic } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
+import { actionTypes } from "../../contextApi/reducer";
 
-const Searchbar = ({ hideButtons = false }) => {
+const Searchbar = ({ hideButtons = false, inputValue }) => {
+  const [{}, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const [inputFocus, setInputFocus] = useState(false);
   const history = useHistory();
 
   const search = (e) => {
     e.preventDefault();
+
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: input,
+    });
+
     history.push("/search");
   };
 
@@ -26,7 +34,7 @@ const Searchbar = ({ hideButtons = false }) => {
           onMouseOver={() => setInputFocus(true)}
           onBlur={() => setInputFocus(false)}
           onMouseOut={() => setInputFocus(false)}
-          value={input}
+          value={input || inputValue}
           onChange={(e) => setInput(e.target.value)}
         />
         <Mic className="search_inputMicIcon" />

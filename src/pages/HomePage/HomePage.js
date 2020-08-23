@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Apps } from "@material-ui/icons";
-import "./Home.css";
+import "./HomePage.css";
 import { Avatar } from "@material-ui/core";
 import Searchbar from "../../components/Searchbar/Searchbar";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="home">
       <div className="header">
@@ -34,4 +34,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
